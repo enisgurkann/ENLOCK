@@ -5,7 +5,7 @@ Efcore with no lock extention
 
 ![alt text](https://github.com/enisgurkann/ENLOCK/blob/master/banner.PNG?raw=true)
 
-# ENLOCK -.Net Core Entity Freamwork Core(EFCORE) With(No Lock) Tool
+# ENLOCK - EFCORE With(No Lock) Tool
 
 [![GitHub](https://img.shields.io/github/license/enisgurkann/ENLOCK?color=594ae2&logo=github&style=flat-square)](https://github.com/enisgurkann/ENLOCK/blob/master/LICENSE)
 [![GitHub Repo stars](https://img.shields.io/github/stars/enisgurkann/ENLOCK?color=594ae2&style=flat-square&logo=github)](https://github.com/enisgurkann/ENLOCK/stargazers)
