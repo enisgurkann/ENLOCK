@@ -1,8 +1,3 @@
-# ENLOCK
-Efcore with no lock extention
-
-
-
 ![alt text](https://github.com/enisgurkann/ENLOCK/blob/master/banner.PNG?raw=true)
 
 # ENLOCK - EFCORE With(No Lock) Tool
