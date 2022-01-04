@@ -16,6 +16,6 @@ jobs:
     - name: Test
       run: dotnet test ./EnLock.sln
     - name: Pack
-      run: dotnet pack -c Release --no-build -o ./packages
+      run: dotnet pack -c Release --no-build -p:PackageVersion=1.0.${{ github.run_number }} -o ./packages
     - name: Push
       run: dotnet nuget push ./packages/EnLock.*.nupkg --skip-duplicate --api-key ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
