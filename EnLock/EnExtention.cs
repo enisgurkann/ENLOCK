@@ -79,7 +79,7 @@ namespace EnLock
                                     },
                                     TransactionScopeAsyncFlowOption.Enabled))
             {
-                result = await query.FirstOrDefaultAsync(cancellationToken);
+                result = await query.FirstAsync(cancellationToken);
                 scope.Complete();
             }
             return result;
