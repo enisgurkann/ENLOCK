@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/enisgurkann/ENLOCK</RepositoryUrl>
     <RepositoryType>Class Library</RepositoryType>
     <PackageTags>efcore,withnolock,nolock,entity freamwork</PackageTags>
+    <PackageVersion>1.0.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
