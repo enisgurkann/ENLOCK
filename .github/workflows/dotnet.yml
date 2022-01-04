@@ -4,16 +4,12 @@ on: [push]
 
 jobs:
   build_and_test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
     - name: Setup .NET Core 6.0
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.x
-      if: matrix.os == 'ubuntu-latest'
     - uses: actions/checkout@v1
     - name: Build
       run: dotnet build ./EnLock.sln --configuration Release
