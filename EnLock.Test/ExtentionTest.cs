@@ -92,6 +92,21 @@ public class UnitTest1
     }
     
     [Fact]
+    public async Task NoLock_Test()
+    {
+        using (var context = new TestContext(CreateNewContextOptions()))
+        {
+            await _testContext.TestDbSet.AddRangeAsync(GetDbSet());
+            await _testContext.SaveChangesAsync();
+
+            var list = await _testContext
+                .NoLock(s => s.TestDbSet.ToListAsync());
+           
+            Assert.Equal(list.Count(), 3);
+        }
+    }
+    
+    [Fact]
     public async Task Any_Test()
     {
         using (var context = new TestContext(CreateNewContextOptions()))

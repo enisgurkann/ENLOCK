@@ -162,5 +162,31 @@ namespace EnLock
             }
             return result;
         }
+        
+        
+        #region NoLockFunc
+        /// <summary>
+        /// No Lock tag added
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TDbContext"></typeparam>
+        /// <param name="dbContext"></param>
+        /// <param name="func"></param>
+        /// <returns></returns>
+        public static T NoLock<T, TDbContext>(this TDbContext dbContext, Func<TDbContext, T> func) where TDbContext : DbContext
+        {
+            T result = default;
+            var transactionOptions = new TransactionOptions
+            {
+                IsolationLevel = IsolationLevel.ReadUncommitted
+            };
+            using (var scope = new TransactionScope(TransactionScopeOption.Required, transactionOptions))
+            {
+                result = func(dbContext);
+                scope.Complete();
+            }
+            return result;
+        }
+        #endregion
     }
 }
