@@ -56,6 +56,21 @@ namespace EnLock
             }
             return result;
         }
+        public static List<T> ToListWithNoLock<T>(this IQueryable<T> query)
+        {
+            List<T> result = default;
+            using (var scope = new TransactionScope(TransactionScopeOption.Required,
+                       new TransactionOptions()
+                       {
+                           IsolationLevel = System.Transactions.IsolationLevel.ReadUncommitted
+                       },
+                       TransactionScopeAsyncFlowOption.Enabled))
+            {
+                result = query.ToList();
+                scope.Complete();
+            }
+            return result;
+        }
         public static async Task<T> ToFirstOrDefaultWithNoLockAsync<T>(this IQueryable<T> query, CancellationToken cancellationToken = default)
         {
             T result = default;
