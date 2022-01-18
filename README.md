@@ -1,6 +1,7 @@
-![alt text](https://github.com/enisgurkann/ENLOCK/blob/master/banner.PNG?raw=true)
 
 # ENLOCK - EFCORE With(No Lock) Tool
+<img src="https://github.com/enisgurkann/ENLOCK/blob/master/ENLOCK.png?raw=true" data-canonical-src="https://github.com/enisgurkann/ENLOCK/blob/master/ENLOCK.png?raw=true" width="150" height="150" />
+
 
 [![GitHub](https://img.shields.io/github/license/enisgurkann/ENLOCK?color=594ae2&logo=github&style=flat-square)](https://github.com/enisgurkann/ENLOCK/blob/master/LICENSE)
 [![GitHub Repo stars](https://img.shields.io/github/stars/enisgurkann/ENLOCK?color=594ae2&style=flat-square&logo=github)](https://github.com/enisgurkann/ENLOCK/stargazers)
@@ -34,7 +35,7 @@ PM> Standart FirstOrDefault
         .Customers
         .AsNoTracking()
         .Where(x => x.Name == 'Enis' && x.Surname == 'Gürkan')
-        .ToFirstOrDefaultkAsync();
+        .FirstOrDefaultkAsync();
  
 ```
  
