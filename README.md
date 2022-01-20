@@ -53,4 +53,16 @@ PM> Using ToFirstOrDefaultWithNoLockAsync
  
 ```
 
+```
+PM> Using other expressions
+```
+
+```csharp
+
+        var customers = await _context.NoLock(s => s.Customers.ToListAsync());
+ 
+```
+
+
+
  
