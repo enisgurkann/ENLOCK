@@ -33,7 +33,6 @@ PM> Standart FirstOrDefault
 
         var customer = await _context
         .Customers
-        .AsNoTracking()
         .Where(x => x.Name == 'Enis' && x.Surname == 'Gürkan')
         .FirstOrDefaultkAsync();
  
@@ -47,7 +46,6 @@ PM> Using ToFirstOrDefaultWithNoLockAsync
 
         var customer = await _context
         .Customers
-        .AsNoTracking()
         .Where(x => x.Name == 'Enis' && x.Surname == 'Gürkan')
         .ToFirstOrDefaultWithNoLockAsync();
  
