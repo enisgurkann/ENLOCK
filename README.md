@@ -13,7 +13,7 @@
 
 
 
-Entity freamwork kullanırken database kilitlenme yani lock olayını engellemek için kullandığımız transcaction scope olayını basite indirgemek için yaptığım extention dur
+It is the plugin we made to simplify the 'transaction scope' event that we use to prevent the database lock event when using Entity Framework.
  
  ## Methods
  FirstOrDefault,Single,ToList,Any and Async
