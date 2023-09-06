@@ -61,6 +61,16 @@ PM> Using other expressions
  
 ```
 
+```
+PM> Using other expressions
+```
+
+```csharp
+
+        var customers = await _context.Customers.WithNoLock().ToListAsync();
+ 
+```
+
 
 
  
