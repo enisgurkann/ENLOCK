@@ -15,6 +15,7 @@
     <PackageVersion>1.0.0.1</PackageVersion>
     <PackageLicenseUrl>https://raw.githubusercontent.com/enisgurkann/ENLOCK/master/LICENSE</PackageLicenseUrl>
     <PackageIconUrl>https://github.com/enisgurkann/ENLOCK/blob/master/ENLOCK.png?raw=true</PackageIconUrl>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
